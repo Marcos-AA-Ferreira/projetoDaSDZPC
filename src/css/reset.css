@@ -1,0 +1,9 @@
+* {
+    margin: 0; /*Define espaçamento entre elementos da página*/
+    padding: 0; /*Define espaçamento interno do elemento (A "Caixa" do ícone)*/
+    box-sizing: border-box; /*para ajustar a "caixa"(pesquisa mais depois)*/
+}
+
+ul{
+    list-style: none; /*Remove os estilos dos itens da lista*/
+}

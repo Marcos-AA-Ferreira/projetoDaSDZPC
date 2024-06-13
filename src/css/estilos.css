@@ -1,0 +1,139 @@
+h1 {
+    color: black;
+}
+
+body {
+    font-family: 'Outfit', sans-serif; /*'font-family:' Define a fonte do elemento*/
+    background-image: url('../imagens/fundo-base.jpg'); /*'Background-image:' Define uma imagem como um fundo da página; 'background' é usada para todas as funções que envolve o fundo da página*/
+    /*a função '../' permite procurar um arquivo no diretório do projeto(No caso, voltar uma pasta que está o projeto e depois segue adiante)*/
+    background-repeat: no-repeat; /*'background-reat:' Define a repetição da imagem*/
+    background-size: cover; /*'background-size:' Define o tamanho da imagem e o 'cover' diz para ocupar todo o espaço da imagem*/
+    min-height: 100vh; /*definir a altura mínima do elemento*/
+    /*vh (Seria a altura da janela de visualização) é uma unidade de medida assim como o pixel 'px'*/
+}
+
+.cabecalho {
+    text-align: center; /*'text-align:' Define o aliamento do elemento, caso, ao centro*/
+    padding: 40px 0; /*'padding:' define o espaçamento acima e abaixo, no caso 60px e dos lados, caso, zero (ele pode receber até quarto valores e no mínimo um./ Importante: não há virgula entre os valores)*/
+}
+
+.cabecalho h1 /*seletor de descendente*/{
+    color:#f1ecff; /*'color:' define a cor do elemento*/
+    font-size: 45px; /*'font-size:' define o tamanho da fonte*/
+    letter-spacing: 10px; /*'letter-spacing:' define espaçamento entre as letras*/
+    text-transform: uppercase; /*'text-transform:' altera as letras; 'uppercase' passa para maiúscula*/
+}
+
+.personagens-slider {
+    display: flex; /*'display:' define a organização dos elementos e seus "filhos" na tela e 'flex' coloco todos os elementos um ao lado do outro*/
+    justify-content: center; /*'justify-content:'alinhar horizontalmente*/
+    align-items: center; /*'align-items:' alinhar verticalmente*/
+    gap: 80px; /*Dar um espaçamento entre os elementos*/
+}
+
+.lista-personagens {
+    width: 330px; /*define a largura*/
+    height: 520px; /*define a altura*/
+    position: relative; /*dá uma base para 'postion: absolute'*/
+}
+
+.btn-seta{
+    background-color: #ffffff; /*Define a cor de fundo do elemento*/
+    width: 70px;
+    height: 70px;
+    border-radius: 50px; /*define o arredondamento das bondas*/
+    border: 0; /*Remove a bonda que ficar ao redor do elemento*/
+    cursor: pointer; /*'cursor:' altera o ícone do curso ao passa pelo elemento e 'pointer' "mãozinha" que clicar*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out; /*'transition:' define a propriedade da animação/evento do mouse(nesse caso); 'background-color' nesse caso é a propriedade que vai mudar, mas poderia ser outra e 'ease-in-out' é como a transição ocorrer*/
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /*definição da sombra*/
+}
+
+.btn-seta.btn-voltar /*quando o elemento possui duas classes*/{
+    transform: rotateY(180deg);/*'transform:' altera alguma propriedade do elemento e 'rotateY()' rotaciona no eixo y e 'deg' são os graus*/
+}
+
+.btn-seta:hover/*Chama um evento ao passa o mouse sobre o elemento(IMPORTANTE:':hover' deve ficar colado com a classe o seletor alvo)*/{
+    background-color: #8351fe;
+}
+
+.cartao {
+    opacity: 0; /*define a visibilidade do elemento*/
+    height: 105%;
+    position: absolute; /*Empilha os elementos um sobre o outro*/
+    padding: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartao.selecionado{
+    opacity: 1;
+    z-index: 1; /*Esse elemento ficar no topo da "pilha"*/
+}
+
+.cartao .imagem-personagem{
+    width: 100%;
+    max-width: 310px;
+}
+
+.cartao .nome{
+    background-color: rgba(179, 177, 185, 0.7); /*Define uma cor com uma opacidade*/
+    padding: 8px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.cartao .descricao{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cartao .descricao .titulo{
+    background-color: #333333;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 12px;
+}
+
+.cartao .descricao .texto{
+    font-size: 14px;
+    padding: 12px;
+    text-align: justify;
+    max-height: 110px;
+    overflow-y: auto; /*Impossibilita que o texto "vaze" do limite definido*/
+}
+
+.cartao.fundo-1{
+    background: url('../imagens/fundo-1.jpg') no-repeat;/*Podesse usar mais de uma propriedade por comando, basta colocar um espaço*/
+}
+
+.cartao.fundo-2{
+    background: url('../imagens/fundo-2.jpg') no-repeat;
+}
+
+.cartao.fundo-3{
+    background: url('../imagens/fundo-3.jpg') no-repeat;
+}
+
+.cartao.fundo-4{
+    background: url('../imagens/fundo-4.jpg') no-repeat;
+}
+
+.cartao.fundo-5{
+    background: url('../imagens/fundo-5.jpg') no-repeat;
+}
+
+.cartao.fundo-6{
+    background: url('../imagens/fundo-6.jpg') no-repeat;
+}
